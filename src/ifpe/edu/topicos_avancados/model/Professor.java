@@ -25,5 +25,8 @@ public class Professor extends Pessoa{
 		return "Professor [Nome=" + super.getNome() + ", codigo=" + this.codigo + "]";
 	}
 
+	public ProfessorDao getPD() {
+		return PD;
+	}
 	
 }
