@@ -8,7 +8,7 @@ public class Professor extends Pessoa{
 	private List<Professor> listaProfessor = new ArrayList<>();
 	private String codigo;
 
-	private Professor(String nome, String codigo) {
+	public Professor(String nome, String codigo) {
 		super(nome);
 		this.codigo = codigo;
 	}
@@ -21,8 +21,8 @@ public class Professor extends Pessoa{
 		this.codigo = codigo;
 	}
 	
-	public boolean cadastrarProfessor(String nome, String codigo) {
-		return addProfessor(new Professor(nome, codigo));
+	public boolean cadastrarProfessor(Professor professor) {
+		return addProfessor(professor);
 	}
 	
 	private boolean addProfessor(Professor professor) {
