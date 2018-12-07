@@ -44,6 +44,14 @@ private static AlunoDao AD;
 		return null;
 	}
 	
+	public String listagemAluno() {
+		String str = "";
+		for(int i = 0; i < this.listaAluno.size(); i++) {
+			str = str + this.listaAluno.get(i).toString() + "\n";
+		}
+		return str;
+	}
+	
 	
 
 }
