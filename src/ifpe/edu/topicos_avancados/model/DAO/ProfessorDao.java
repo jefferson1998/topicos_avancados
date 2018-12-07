@@ -39,7 +39,6 @@ public class ProfessorDao {
 	
 	public String listagemProfessor() {
 		String str = "";
-		
 		for(int i = 0; i < this.listaProfessor.size(); i++) {
 			str = str + this.listaProfessor.get(i).toString() + "\n";
 		}
