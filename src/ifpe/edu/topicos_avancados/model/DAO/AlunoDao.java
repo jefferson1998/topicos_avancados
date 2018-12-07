@@ -52,6 +52,14 @@ private static AlunoDao AD;
 		return str;
 	}
 	
-	
+	public boolean removerAluno(String matricula) {
+		for (int i = 0; i < listaAluno.size(); i++) {
+			if(listaAluno.get(i).getMatricula().equals(matricula)) {
+				listaAluno.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
 
 }
