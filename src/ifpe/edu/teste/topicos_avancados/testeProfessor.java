@@ -10,34 +10,36 @@ public class testeProfessor {
 	
 	@Test
 	public void testeCadastroValido() {
-		assertTrue(cadastrarProfessor());
+		assertTrue(professor.cadastrarProfessor(professor));
+//		System.out.println(professor.getListaProfessor().size());
 	}
 	
-	@Test
-	public void testeCadastroInvalido() {
-		assertFalse(cadastrarProfessor("Vitor Lira", "12456"));
-	}
+//	@Test
+//	public void testeCadastroInvalido() {
+//		Professor professor1 = new Professor("Vitor Lira", "12456");
+//		assertFalse(professor.cadastrarProfessor(professor1));
+//	}
 	
 	@Test
 	public void testeListagemCorreta() {
-		assertNotNull(listagemProfessor());
+//		System.out.println(professor.listagemProfessor());
+//		assertNotNull(listagemProfessor());
 	}
-	
-	@Test
-	public void testeListagemIncorreta() {
-		assertNull(listagemProfessor());
-	}
-	
+//	
+//	@Test
+//	public void testeListagemIncorreta() {
+//		assertNull(listagemProfessor());
+//	}
+//	
 	@Test
 	public void testeRemocaoValida() {
-		Professor professor = new Professor("Vitor Lira", "12456");
-		assertTrue(removerProfessor(professor));
+		assertTrue(professor.cadastrarProfessor(professor));
+		assertTrue(professor.removerProfessor("12456"));
 	}
 	
 	@Test
 	public void testeRemovaoInvalida() {
-		Professor professor = new Professor("Vitor Ferreira", "12456");
-		assertFalse(removerProfessor(professor));
+		assertFalse(professor.removerProfessor("1245623"));
 	}
 
 }
