@@ -21,7 +21,6 @@ public class testeProfessor {
 	
 	@Test
 	public void testeListagemCorreta() {
-		System.out.println(professor.getPD().listagemProfessor());
 		assertTrue(professor.getPD().listagemProfessor().contains("Victor"));
 	}
 	
