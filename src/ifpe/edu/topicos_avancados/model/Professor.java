@@ -25,11 +25,5 @@ public class Professor extends Pessoa{
 		return "Professor [Nome=" + super.getNome() + ", codigo=" + this.codigo + "]";
 	}
 
-	@Override
-	public String toString() {
-		return "Professor [listaProfessor=" + listaProfessor + ", codigo=" + codigo + "]";
-	}
-	
-	
 	
 }
