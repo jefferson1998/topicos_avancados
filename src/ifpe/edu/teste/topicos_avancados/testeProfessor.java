@@ -1,14 +1,16 @@
 package ifpe.edu.teste.topicos_avancados;
 
 import static org.junit.Assert.*;
-
+import ifpe.edu.topicos_avancados.model.Professor;
 import org.junit.Test;
 
 public class testeProfessor {
 	
+	Professor professor = new Professor("Vitor Lira", "12456");
+	
 	@Test
 	public void testeCadastroValido() {
-		assertTrue(cadastrarProfessor("Vitor Lira", "12456"));
+		assertTrue(cadastrarProfessor());
 	}
 	
 	@Test
