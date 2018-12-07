@@ -4,45 +4,38 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ifpe.edu.topicos_avancados.model.Professor;
+
 public class testeAluno {
+	
+	Aluno aluno = new Aluno ("Asaph Souza", "12456");
 	
 	@Test
 	public void testeCadastroValido() {
-		Aluno aluno = new aluno ("Rodrigo", "20171D");
-		assertTrue(addAluno(aluno));
+		assertTrue(aluno.getPD().cadastrarAluno(aluno));
+
 	}
 	
 	@Test
 	public void testeCadastroInvalido() {
-		Aluno aluno = new aluno ("Rodrigo", "20171D");
-		assertFalse(addAluno(aluno));
+		Aluno aluno1 = new Aluno("Asaph Souza", "12456");
+		assertFalse(aluno.getPD().cadastrarAluno(aluno1));
 	}
 	
 	@Test
 	public void testeListagemCorreta() {
-		assertNotNull(listagemAluno());
-	}
-	
-	@Test
-	public void testeRemocaoInvalido() {
-		Aluno aluno = new aluno ("Rodrigo", "20171D32");
-		assertFalse(removerAluno(aluno));
+		assertTrue(aluno.getPD().listagemAluno().contains("Asaph"));
 	}
 	
 	@Test
 	public void testeRemovaoValida() {
-		Aluno aluno = new aluno ("Rodrigo", "20171D");
-		assertTrue(removerAluno(aluno));
-	}
-
-	@Test
-	public void testeEncontrarPeloCodigoValido() {
-		assertTrue(aluno.findByCode("2"));
+		assertTrue(aluno.getPD().removerAluno("12456"));
 	}
 	
 	@Test
-	public void testEncontrarPeloCodigoInvalido() {
-		assertFalse(aluno.findByCode("3"));
+	public void testeRemocaoInvalido() {
+		assertFalse(aluno.getPD().removerAluno("123"));
 	}
+
 	
 }
